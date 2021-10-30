@@ -5,6 +5,8 @@ var tasksToDoEl = document.querySelector("#tasks-to-do");
 var tasksInProgressEl = document.querySelector("#tasks-in-progress");
 var tasksCompletedEl = document.querySelector("#tasks-completed");
 var pageContentEl = document.querySelector("#page-content");
+
+//create array to hold tasks for saving
 var tasks = [];
 
 var taskFormHandler = function(event) {
@@ -12,7 +14,7 @@ var taskFormHandler = function(event) {
   var taskNameInput = document.querySelector("input[name='task-name']").value;
   var taskTypeInput = document.querySelector("select[name='task-type']").value;
 
-  //check if input values are empty strings
+  //check if input values are empty (validate)
   if (!taskNameInput || !taskTypeInput) {
       alert("You need to fill out the task form!");
       return false;
